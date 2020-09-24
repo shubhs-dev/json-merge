@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/shubh-works/json-merge/compare/v1.0.0...v1.0.1) (2020-09-24)
+
+
+### Bug Fixes
+
+* argument check always failing for match ([8a91cd3](https://github.com/shubh-works/json-merge/commit/8a91cd3adcd848d7b59a0c09f5715371789e28db))
+
 # 1.0.0 (2020-09-24)
 
 
