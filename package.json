@@ -1,6 +1,6 @@
 {
   "name": "@shubh-works/json-merge",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Library to merge multiple json files into single json file",
   "main": "src/index.js",
   "private": false,
