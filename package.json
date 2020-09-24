@@ -76,5 +76,8 @@
       "@semantic-release/github",
       "@semantic-release/git"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
