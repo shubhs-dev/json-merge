@@ -49,9 +49,12 @@ const { argv } = yargs
   .alias("v", "version")
   .check((args) => {
     const { match } = args;
+
     if (Array.isArray(match)) {
       throw new Error("Only 1 match value should be provided");
     }
+
+    return true;
   });
 
 function errorHandler(error) {
