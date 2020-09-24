@@ -92,9 +92,18 @@ async function main() {
     Object.assign(result, json);
   });
 
-  const contentToWrite = argv.r
-    ? Object.assign(result, JSON.parse(await asyncReadFile(argv.output)))
-    : result;
+  let contentToWrite = result;
+
+  try {
+    if (!argv.r) {
+      contentToWrite = Object.assign(
+        result,
+        JSON.parse(await asyncReadFile(argv.output))
+      );
+    }
+  } catch {
+    contentToWrite = result;
+  }
 
   await asyncRemoveFile(argv.output);
   await asyncWriteJson(argv.output, contentToWrite);
