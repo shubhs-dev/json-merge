@@ -1,6 +1,6 @@
 {
   "name": "@shubhanshu-works/json-merge",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Library to merge multiple json files into single json file",
   "main": "src/index.js",
   "bin": {
@@ -8,11 +8,12 @@
   },
   "scripts": {
     "test": "jest",
-    "json-merge": "node src/cli.js"
+    "json-merge": "node src/cli.js",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shubh-works/json-merge.git"
+    "url": "https://github.com/shubh-works/json-merge.git"
   },
   "keywords": [
     "json",
@@ -41,7 +42,8 @@
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "semantic-release": "^17.1.2"
   },
   "config": {
     "commitizen": {
@@ -56,5 +58,11 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "release": {
+    "branches": [
+      "master",
+      "next"
+    ]
   }
 }
