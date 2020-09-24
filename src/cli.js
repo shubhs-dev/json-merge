@@ -76,7 +76,19 @@ function runAsyncMain(mainFn, ...args) {
 }
 
 async function main() {
-  const result = {};
+  let result = {};
+
+  // if no-replace, then save output file content
+  if (!argv.r) {
+    try {
+      Object.assign(result, JSON.parse(await asyncReadFile(argv.o)));
+    } catch {
+      result = {};
+    }
+  }
+
+  // delete output file to prevent including it in merge
+  await asyncRemoveFile(argv.o);
 
   await asyncMap(argv.i, async (dirName) => {
     const configPath = isAbsolute(dirName)
@@ -92,21 +104,7 @@ async function main() {
     Object.assign(result, json);
   });
 
-  let contentToWrite = result;
-
-  try {
-    if (!argv.r) {
-      contentToWrite = Object.assign(
-        result,
-        JSON.parse(await asyncReadFile(argv.output))
-      );
-    }
-  } catch {
-    contentToWrite = result;
-  }
-
-  await asyncRemoveFile(argv.output);
-  await asyncWriteJson(argv.output, contentToWrite);
+  await asyncWriteJson(argv.output, result);
 }
 
 runAsyncMain(main);

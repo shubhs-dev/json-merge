@@ -2,7 +2,9 @@
 
 const { readFile, writeFile, unlink } = require("fs");
 const { promisify } = require("util");
+const glob = require("glob");
 
+const asyncGlob = promisify(glob);
 const asyncMap = (arr, callback) =>
   Promise.all(arr.map((...args) => callback(...args)));
 
@@ -22,4 +24,10 @@ async function asyncRemoveFile(filePath) {
   }
 }
 
-module.exports = { asyncMap, asyncReadFile, asyncWriteJson, asyncRemoveFile };
+module.exports = {
+  asyncGlob,
+  asyncMap,
+  asyncReadFile,
+  asyncWriteJson,
+  asyncRemoveFile,
+};

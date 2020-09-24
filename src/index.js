@@ -1,12 +1,7 @@
 #!/usr/bin/env node
 
-const { promisify } = require("util");
-const glob = require("glob");
 const { join } = require("path");
-
-const asyncGlob = promisify(glob);
-
-const { asyncMap, asyncReadFile } = require("./utility");
+const { asyncGlob, asyncMap, asyncReadFile } = require("./utility");
 
 async function parseFile(filePath) {
   const buffer = await asyncReadFile(filePath);
@@ -28,8 +23,8 @@ async function merge(searchPath, options = {}) {
   const {
     include = "*.json",
     exclude,
-    caseInsensitive = true,
-    recursive = true,
+    caseInsensitive = false,
+    recursive = false,
   } = options;
   const matches = await asyncGlob(include, {
     cwd: searchPath,
