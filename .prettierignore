@@ -6,5 +6,8 @@ dist
 # Ignore dependencies
 node_modules
 
-# Ignore all HTML files:
+# Ignore all HTML files
 *.html
+
+# Ignore github setup files
+.github
