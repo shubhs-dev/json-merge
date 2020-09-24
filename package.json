@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "description": "Library to merge multiple json files into single json file",
   "main": "src/index.js",
+  "bin": {
+    "json-merge": "src/cli.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "json-merge": "node src/cli.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,10 @@
     "url": "https://github.com/shubh-works/json-merge/issues"
   },
   "homepage": "https://github.com/shubh-works/json-merge#readme",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "yargs": "^16.0.3"
+  },
   "devDependencies": {
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
@@ -31,6 +39,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.3.0",
+    "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
     "prettier": "2.1.2"
   },
