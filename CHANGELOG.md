@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/shubh-works/json-merge/compare/v1.0.1...v1.0.2) (2020-09-24)
+
+
+### Bug Fixes
+
+* **replace:** option not working if file not present ([67a09bf](https://github.com/shubh-works/json-merge/commit/67a09bf440afc42a3486050205376c639fdc82cb))
+
 ## [1.0.1](https://github.com/shubh-works/json-merge/compare/v1.0.0...v1.0.1) (2020-09-24)
 
 
