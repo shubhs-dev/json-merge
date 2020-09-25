@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/shubh-works/json-merge/compare/v1.0.2...v2.0.0) (2020-09-24)
+
+
+### Bug Fixes
+
+* **all:** prevent output json from included in merge ([3e74121](https://github.com/shubh-works/json-merge/commit/3e741217717ed650043b714378715ba78a618120))
+
+
+### BREAKING CHANGES
+
+* **all:** reversed default value for options -c and -R
+
 ## [1.0.2](https://github.com/shubh-works/json-merge/compare/v1.0.1...v1.0.2) (2020-09-24)
 
 
