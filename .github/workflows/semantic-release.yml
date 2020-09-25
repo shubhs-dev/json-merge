@@ -3,24 +3,28 @@ name: CI
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - name: Setup Node.js
-          uses: actions/setup-node@v1
-          with:
-            node-version: 12
-        - name: Install
-          run:  npm ci
-        - name: Test
-          run: npm test
-        - name: Release
-          env:
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-            NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-          run: npx semantic-release
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install
+        run: npm ci
+      - name: Test Coverage
+        run: npm run test:coverage
+      - name: Upload coverage reports
+        run: bash <(curl -s https://codecov.io/bash) -t ${{secrets.CODECOV_TOKEN}}
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: npx semantic-release
