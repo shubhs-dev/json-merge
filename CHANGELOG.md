@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/shubh-works/json-merge/compare/v2.0.0...v2.1.0) (2020-11-02)
+
+
+### Features
+
+* added f option to create output dir ([ae1b5b8](https://github.com/shubh-works/json-merge/commit/ae1b5b8b1522a7bf92645feeb0e7c098fa81716a))
+
 # [2.0.0](https://github.com/shubh-works/json-merge/compare/v1.0.2...v2.0.0) (2020-09-24)
 
 
