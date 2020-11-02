@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const { isAbsolute, resolve } = require("path");
+const { isAbsolute, resolve, dirname } = require("path");
 const yargs = require("yargs");
 const { merge } = require("./index");
 const {
@@ -9,6 +9,8 @@ const {
   asyncRemoveFile,
   asyncWriteJson,
   asyncReadFile,
+  existsSync,
+  asyncMkdir,
 } = require("./utility");
 
 const { argv } = yargs
@@ -43,6 +45,9 @@ const { argv } = yargs
     "R",
     "Search child directories as well, works only if include doesn't contain /"
   )
+  .boolean("f")
+  .alias("f", "create-directory")
+  .describe("f", "Force create output directory if not present already")
   .demandOption(["i", "o"])
   .help("h")
   .alias("h", "help")
@@ -104,7 +109,11 @@ async function main() {
     Object.assign(result, json);
   });
 
-  await asyncWriteJson(argv.output, result);
+  if (argv.f && !existsSync(dirname(argv.o))) {
+    await asyncMkdir(dirname(argv.o), { recursive: true });
+  }
+
+  await asyncWriteJson(argv.o, result);
 }
 
 runAsyncMain(main);

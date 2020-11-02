@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { readFile, writeFile, unlink } = require("fs");
+const { readFile, writeFile, unlink, existsSync, mkdir } = require("fs");
 const { promisify } = require("util");
 const glob = require("glob");
 
@@ -11,6 +11,7 @@ const asyncMap = (arr, callback) =>
 const removeFile = promisify(unlink);
 const asyncWriteFile = promisify(writeFile);
 const asyncReadFile = promisify(readFile);
+const asyncMkdir = promisify(mkdir);
 
 async function asyncWriteJson(filePath, content) {
   await asyncWriteFile(filePath, JSON.stringify(content));
@@ -30,4 +31,6 @@ module.exports = {
   asyncReadFile,
   asyncWriteJson,
   asyncRemoveFile,
+  existsSync,
+  asyncMkdir,
 };
