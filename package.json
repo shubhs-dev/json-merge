@@ -1,5 +1,5 @@
 {
-  "name": "@shubh-works/json-merge",
+  "name": "@atshubh/json-merge",
   "version": "2.1.0",
   "description": "Library to merge multiple json files into single json file",
   "main": "src/index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shubh-works/json-merge.git"
+    "url": "https://github.com/atshubh/json-merge.git"
   },
   "keywords": [
     "json",
@@ -27,9 +27,9 @@
   "author": "Shubhanshu Aggarwal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shubh-works/json-merge/issues"
+    "url": "https://github.com/atshubh/json-merge/issues"
   },
-  "homepage": "https://github.com/shubh-works/json-merge#readme",
+  "homepage": "https://github.com/atshubh/json-merge#readme",
   "dependencies": {
     "glob": "^7.1.6",
     "yargs": "^16.2.0"
