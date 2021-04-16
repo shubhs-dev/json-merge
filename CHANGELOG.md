@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/atshubh/json-merge/compare/v2.1.0...v3.0.0) (2021-04-16)
+
+
+### Code Refactoring
+
+* **package:** changed package name to atshubh/json-merge ([1f36611](https://github.com/atshubh/json-merge/commit/1f36611d0f2d3ffea721c934de96c076cdded66e))
+
+
+### BREAKING CHANGES
+
+* **package:** package name changed
+
 # [2.1.0](https://github.com/shubh-works/json-merge/compare/v2.0.0...v2.1.0) (2020-11-02)
 
 
