@@ -32,7 +32,7 @@
   "homepage": "https://github.com/atshubh/json-merge#readme",
   "dependencies": {
     "glob": "^7.1.6",
-    "yargs": "^17.0.0"
+    "yargs": "^17.0.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
