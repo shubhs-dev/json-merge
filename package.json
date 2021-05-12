@@ -1,6 +1,6 @@
 {
   "name": "@atshubh/json-merge",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Library to merge multiple json files into single json file",
   "main": "src/index.js",
   "private": false,

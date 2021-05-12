@@ -1,3 +1,12 @@
+## [3.0.1](https://github.com/atshubh/json-merge/compare/v3.0.0...v3.0.1) (2021-05-12)
+
+
+### Bug Fixes
+
+* added missing comma ([5aa11ac](https://github.com/atshubh/json-merge/commit/5aa11acac28948ce74ae0788c15aca2057cd830d))
+* npm i ([78b02d4](https://github.com/atshubh/json-merge/commit/78b02d4bcae21479616ea745ebd138e61cc5da85))
+* package.json ([bfc5dc5](https://github.com/atshubh/json-merge/commit/bfc5dc51dcd6dafaebdb45512de560cec3aacf9f))
+
 # [3.0.0](https://github.com/atshubh/json-merge/compare/v2.1.0...v3.0.0) (2021-04-16)
 
 
