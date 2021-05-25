@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/atshubh/json-merge/compare/v3.0.1...v3.0.2) (2021-05-25)
+
+
+### Bug Fixes
+
+* force release ([1f85cc9](https://github.com/atshubh/json-merge/commit/1f85cc92c78612344b63ec951e1462a98ebd7ff3))
+
 ## [3.0.1](https://github.com/atshubh/json-merge/compare/v3.0.0...v3.0.1) (2021-05-12)
 
 
